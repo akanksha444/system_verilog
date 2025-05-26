@@ -20,10 +20,6 @@ module test;
     queue_arr.insert(4,4);
     $display("queue array: %0p",queue_arr);
     
-    $display("Pushing numeral '0' from the front");
-    queue_arr.push_front(0);
-    $display("queue array: %0p",queue_arr);
-    
     $display("Pop numeral from the front");
     popped = queue_arr.pop_front();
     $display("Popped element: %0d",popped);
