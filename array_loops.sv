@@ -4,6 +4,7 @@ module test;
   int arr1[10];
   int arr2[15];
   int arr3[3];
+  int l=0;
   initial begin
     $display("_____________________________________________");
     $display("arr1: %0p", arr1);
@@ -26,8 +27,9 @@ module test;
     $display("_____________________________________________");
     $display("arr3: %0p", arr3);
     $display("Initializing arr3 using repeat loop");
-    foreach(arr3[l])begin
+    repeat($size(arr3))begin
       arr3[l] = l*5;
+      l++;
       $display("Inside repeat loop :: arr3[%0d]:%0d",l,arr3[l]);
     end
     $display("(after initialization | arr3: %0p", arr3);
